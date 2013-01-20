@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"/>
+<html>
+ <head>
+  <title> New Document </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <BGSOUND id="BGSOUND_ID">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" LANGUAGE="JavaScript" src="baloom_game.js"></script>
+
+ </head>
+
+ <body onload="loadData()">
+   <div class="main_pic">
+	   <div id="rightcounter"></div>
+       <div class="right_wrong_massege">
+			<div id="mass"></div><div id="quality"></div><div id="rightwrong"></div>
+			<div style="clear:both;"></div>
+		</div>
+	   <input type="button" value="שלח" onclick="send_baloom()" class="send_but"/>
+	   <input type="button" value="הפרח" onclick="fly_ballon()" class="right_but"/>
+	   <input type="button" value="פוצץ" onclick="kill_baloom()" class="bloom_but"/>
+	   <img src="reset1.png" onclick="startGame()" class="reset_rutton"/>
+		
+  <script type="text/javascript">
+	for (i=0;i<10 ;i++ )
+	{
+           document.write("<div class=\"upBaloom\" id=\"upBaloom"+i+"\"><div class=\"word\" id=\"word"+i+"\"></div></div>");		
+	}
+  </script>
+
+   </div> 
+  
+ </body>
+</html>

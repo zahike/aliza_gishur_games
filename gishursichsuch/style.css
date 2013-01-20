@@ -1,0 +1,70 @@
+  *{margin:0;padding:0;}
+  .wrapper{
+  position:relative;
+  background:url('background.jpg') top center no-repeat;
+  width:960px;
+  height:920px;
+  margin:0px auto;
+  border:1px solid #000;
+  }
+  #gishurState{
+  position:absolute;
+  width:200px;
+  top:10px;
+  left:440px;
+  color:#33ff33;
+  font-family:arial;
+  font-size:40px;
+  }
+  .gishurBut{
+  position:absolute;
+  right:50px;
+  width:120px;
+  height:40px;
+  font-size:30px;
+  }
+  .right_box{
+  position:absolute;
+  top:120px;
+  right:440px;
+  width:450px;
+  }
+  #error_message{
+  position:absolute;
+  top:300px;
+  left:400px;
+  color:#cc0000;
+  font-family:arial;
+  font-size:20px;
+  }
+  .wrong_box{
+  position:absolute;
+  top:350px;
+  right:440px;
+  width:450px;
+  }
+  .button_box{
+  position:absolute;
+  top:520px;
+  right:50px;
+  width:860px;
+  }
+  .word_but{
+  background-color:#b7b7b7;
+  height:30px;
+  font-size:25px;
+  padding:0 5px;
+  margin:5px 0 0 5px;
+  float:right;
+  }
+  .outWord{
+  background-color:#b7b7b7;
+  height:30px;
+  font-size:25px;
+  display:none;
+  padding:0 5px;
+  margin:5px 0 0 5px;
+  float:right;
+  }
+  
+

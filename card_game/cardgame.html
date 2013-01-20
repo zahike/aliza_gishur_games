@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content=""> 
+  <BGSOUND id="BGSOUND_ID">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+  	 var temp=location.search;
+	 temp=temp.substring(1);
+	 params = temp.split('&');
+	 num = params[1].split('=');
+     var cardNum=num[1];
+  </script>
+  <script type="text/javascript" src="cardgame.js"></script>
+ </head>
+
+ <body onLoad="PreloadImages()" style=" background:#2bc4d5 url('blue.jpg');">
+  <script type="text/javascript">
+   switch (cardNum)
+     {
+     case "12":
+           document.write(" <div class=\"wrapper\" style=\"width:840px;\">");
+        break;  
+     case "20":
+           document.write(" <div class=\"wrapper\" style=\"width:1050px;\">");
+        break;  
+     case "30":
+           document.write(" <div class=\"wrapper\" style=\"width:1260px;\">");
+        break;  
+	 }
+  </script>
+	  <script type="text/javascript">
+	         for (var i = 0; i < cardNum ; i++ )
+     {
+           document.write("<img id=\"picture"+i+"\" src=\"photo.jpg\" onclick=\"ChangePicture('picture"+i+"',"+i+")\" class=\"box\"/>");
+     }
+	  </script>
+	  <div id="piccard"></div>
+  <script type="text/javascript">
+   switch (cardNum)
+     {
+     case "12":
+           document.write("<img id=\"restartPic\" src=\"reset.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 70px 0 70px;\"/>");
+        break;  
+     case "20":
+           document.write("<img id=\"restartPic\" src=\"reset1.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 175px 0 175px;\"/>");
+       break;  
+     case "30":
+           document.write("<img id=\"restartPic\" src=\"reset1.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 280px 0 280px;\"/>");
+         break;  
+	 }
+  </script>
+	  <div id="matchedcards"></div>
+	  <div style="clear:both;"></div>
+  </div>
+ </body>
+</html>
