@@ -2,6 +2,7 @@ var word = new Array();
 var shaffled_array = new Array();
 var rightNum;
 var wrongNum;
+var send_num;
 var gishur = true;
 
 	word[0] = "מנהלים משא ומתן";
@@ -50,6 +51,7 @@ shaffled_array.sort( randOrd );
 	}
 rightNum=0;
 wrongNum=0;
+send_num=0;
 
 }
 function clear_error_message(){
@@ -69,11 +71,14 @@ function gishurQuality(num){
 	{
 			document.getElementById("rightWord"+rightNum).innerHTML = word[shaffled_array[num]];	
             document.getElementById("rightWord"+rightNum).style.display = "block";	
+//  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
 			rightNum++;
             document.getElementById("wordBut"+num).style.display = "none";
 				if (rightNum+wrongNum == 24){document.all['BGSOUND_ID'].src="sounds/app-29.wav";}
+  document.getElementById("rightcounter").innerHTML = "לחצת <br />"+send_num+"<br />פעמים<br />צדקת<br />"+(rightNum+wrongNum)+"<br />פעמים";
 	} else {
 		document.getElementById("error_message").innerHTML = "טעות, נסה שנית";
+  document.getElementById("rightcounter").innerHTML = "לחצת <br />"+send_num+"<br />פעמים<br />צדקת<br />"+(rightNum+wrongNum)+"<br />פעמים";
 		clear_err = setTimeout("clear_error_message()",1500);
 			}
 }
@@ -85,12 +90,15 @@ function ungishurQuality(num){
 			wrongNum++;
             document.getElementById("wordBut"+num).style.display = "none";
     			if (rightNum+wrongNum == 24){document.all['BGSOUND_ID'].src="sounds/app-29.wav";}
+  document.getElementById("rightcounter").innerHTML = "לחצת <br />"+send_num+"<br />פעמים<br />צדקת<br />"+(rightNum+wrongNum)+"<br />פעמים";
 	} else {
 		document.getElementById("error_message").innerHTML = "טעות, נסה שנית";
+  document.getElementById("rightcounter").innerHTML = "לחצת <br />"+send_num+"<br />פעמים<br />צדקת<br />"+(rightNum+wrongNum)+"<br />פעמים";
 		clear_err = setTimeout("clear_error_message()",1500);
 			}
 }
 function checkWord(num){
+	send_num++;
 	if (shaffled_array[num]<12){
 		gishurQuality(num);
 	} else {

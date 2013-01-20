@@ -8,6 +8,7 @@ var word_num;
 var ballon_fly;
 var checked;
 var right;
+var send_num;
 var playing;
 var balloon_moves;
 
@@ -19,6 +20,7 @@ document.all['BGSOUND_ID'].src="sounds/cartoon2.wav";
 	 ballon_num=0;
 	 word_num=0;
 	 right=0;
+	 send_num=0;
 	 playing=true;
 	 balloon_moves=false;
   document.getElementById("rightcounter").innerHTML = "";
@@ -119,6 +121,7 @@ startGame();
   document.getElementById("rightwrong").innerHTML = "  טעות  ";
   document.getElementById("rightwrong").style.color="#ff0033";
   document.getElementById("upBaloom"+ballon_num).style.background = "url('sad_smiley.png') center center no-repeat;";
+  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
       mistake = setTimeout("send_baloom()",1500); 
 		  } else {
 			    right++;
@@ -126,7 +129,7 @@ startGame();
   document.getElementById("quality").innerHTML = words[shaffled_array[word_num]];
   document.getElementById("rightwrong").innerHTML = "  נכון  ";
   document.getElementById("rightwrong").style.color="#009d4f";
-  document.getElementById("rightcounter").innerHTML = "צדקת <br />"+right+"<br />פעמים";
+  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
 				checked=true;
 				fly_ballon();
 		  }
@@ -138,14 +141,15 @@ startGame();
   document.getElementById("rightwrong").innerHTML = "  טעות  ";
   document.getElementById("rightwrong").style.color="#ff0033";
   document.getElementById("upBaloom"+ballon_num).style.background = "url('sad_smiley.png') center center no-repeat;";
-      mistake = setTimeout("send_baloom()",1500); 
+   document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
+     mistake = setTimeout("send_baloom()",1500); 
 		  } else { 
 			    right++;
   document.getElementById("mass").innerHTML = "  אינה תכונה של המגשר  ";
   document.getElementById("quality").innerHTML = words[shaffled_array[word_num]];
   document.getElementById("rightwrong").innerHTML = "  נכון  ";
   document.getElementById("rightwrong").style.color="#009d4f";
-  document.getElementById("rightcounter").innerHTML = "צדקת <br />"+right+"<br />פעמים";
+  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
 				checked=true;
 				kill_baloom();
 		  }
@@ -154,6 +158,7 @@ startGame();
   function send_baloom(){
 	if ((!checked)&&(playing)&&(!balloon_moves))
 	{
+	send_num++;
 	ballon_high=700;
     ballon_width=450;
     ballon_fly=false;

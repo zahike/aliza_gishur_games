@@ -66,5 +66,16 @@
   margin:5px 0 0 5px;
   float:right;
   }
+	#rightcounter{
+	position:absolute;
+	width:100px;
+	top:150px;
+	left:-100px;
+	color:#00cc66;
+	font-family:arial;
+	font-size:30px;
+	font-weight:bold;
+    text-align:center;
+	}
   
 
