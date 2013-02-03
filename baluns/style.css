@@ -34,6 +34,15 @@
 	left:350px;
 	font-size:40px;
 	}
+	.inst_but{
+	position:absolute;
+	Z-index:1;
+	width:150px;
+	height:30px;
+	top:20px;
+	left:1000px;
+	font-size:20px;
+	}
 	.reset_rutton{
 	position:absolute;
 	Z-index:1;
@@ -94,3 +103,24 @@
 	font-weight:bold;
     text-align:center;
 	}
+	#instructions{
+	position:absolute;
+	Z-index:2;
+	display:none;
+	background:#c0c0c0;
+	width:450px;
+	height:400px;
+	top:200px;
+	left:700px;
+	color:#000;
+	font-family:arial;
+	font-size:20px;
+    text-align:right;
+	}
+  .return_butten{
+	position:absolute;
+	top:570px;
+	right:-190px;
+ 	font-family:arial;
+	font-size:18px;
+ }

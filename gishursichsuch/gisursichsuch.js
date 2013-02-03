@@ -3,7 +3,8 @@ var shaffled_array = new Array();
 var rightNum;
 var wrongNum;
 var send_num;
-var gishur = true;
+var gishur;
+var instructionOn;
 
 	word[0] = "מנהלים משא ומתן";
 	word[1] = "מציעים הצעות בפתרון";
@@ -47,12 +48,29 @@ shaffled_array.sort( randOrd );
 
 	for (i=0;i<24 ;i++ )
 	{
+            document.getElementById("wordBut"+i).style.display = "block";
             document.getElementById("wordBut"+i).innerHTML = word[shaffled_array[i]];	
 	}
+	for (i=0;i<12 ;i++ )
+	{
+			document.getElementById("rightWord"+i).innerHTML = "";	
+            document.getElementById("rightWord"+i).style.display = "none";	
+			document.getElementById("wrongWord"+i).innerHTML = "";	
+            document.getElementById("wrongWord"+i).style.display = "none";	
+	}
+  document.getElementById("rightcounter").innerHTML = "";
+
 rightNum=0;
 wrongNum=0;
 send_num=0;
+document.getElementById("gishurState").innerHTML = "גישור";
+gishur = true;
+  document.getElementById("instructions").style.display = "none";
+	 instructionOn=false;
 
+}
+function startGame(){
+	preload();
 }
 function clear_error_message(){
 		document.getElementById("error_message").innerHTML = "";
@@ -71,7 +89,6 @@ function gishurQuality(num){
 	{
 			document.getElementById("rightWord"+rightNum).innerHTML = word[shaffled_array[num]];	
             document.getElementById("rightWord"+rightNum).style.display = "block";	
-//  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
 			rightNum++;
             document.getElementById("wordBut"+num).style.display = "none";
 				if (rightNum+wrongNum == 24){document.all['BGSOUND_ID'].src="sounds/app-29.wav";}
@@ -105,3 +122,13 @@ function checkWord(num){
 		ungishurQuality(num);
 	}
 }
+	function appeareInstruction(){
+		if (instructionOn)
+		{
+		 document.getElementById("instructions").style.display = "none";
+		 instructionOn = false;
+		} else {
+		 document.getElementById("instructions").style.display = "block";
+		 instructionOn = true;
+		}
+	}

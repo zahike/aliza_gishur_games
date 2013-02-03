@@ -4,6 +4,7 @@
   var firstCardOpen = 0;
   var secondCardOpen = 0;
   var score;
+  var instructionOn;
 
   function randOrd(){
     return (Math.round(Math.random())-0.5); 
@@ -29,7 +30,9 @@
 	 state = "idle";	 
      score = 0;
 	 cardsOpened = 0;
-     document.getElementById("piccard").innerHTML = ("");
+   document.getElementById("instructions").style.display = "none";
+	 instructionOn=false;
+    document.getElementById("piccard").innerHTML = ("");
      document.getElementById("matchedcards").innerHTML = ("");
   }
 
@@ -82,4 +85,15 @@
   function restart(){
 	  PreloadImages();
   }
+	function appeareInstruction(){
+		if (instructionOn)
+		{
+		 document.getElementById("instructions").style.display = "none";
+		 instructionOn = false;
+		} else {
+		 document.getElementById("instructions").style.display = "block";
+		 document.getElementById("instructiontext").innerHTML = ("משחק זה הוא משחק זיכרון – לחיצה על קלף הופכת אותו. לחיצה על עוד קלף הופכת גם אותו. אם המילים על הקלפים הן הפכים הרווחת את הזוג והם יישארו גלויים אם לא לחיצה נוספת תכסה שוב את הקלפים ותוכל להפוך זוג נוסף. למטה נרשמים כמה זוגות מצאת וכמה הפכת.");
+		 instructionOn = true;
+		}
+	}
   

@@ -2,27 +2,71 @@
 <html>
  <head>
   <title> New Document </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="Generator" content="EditPlus">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+<style type="text/css">
+  *{margin:0;padding:0;}
+.gamesForms{
+  width:650px;
+  height:500px;
+  background-color:#c0c0c0;
+  margin:20px auto;
+  font-size:20px;
+  line-height:30px;
+  text-align:center;
+}
+.formBox{
+height:120px;
+width:430px;
+text-align:center;
+margin:0 auto;
+}
+.formTextLine{
+  height:120px;
+  font-size:20px;
+  line-height:120px;
+  float:left;
+}
+</style>
  </head>
 
- <body dir="rtl">
-  <div class="logo" style="font-size:46px;text-align:center;padding:0;border:3px solid red;">ξωηχιν ωμ ςμιζδ</div>
-  <form id="myForm" method="get" action="card_game/cardgame.html">
-    <input type="submit" name="submit" value="ξωηχ χμτιν" class="in_sub"/>
-      <select name = "GamOptions">
-		<option value = "12">12 cards</option>
-		<option value = "20">20 cards</option>
-		<option value = "30">30 cards</option>
-      </select>
-  </form>
-  <form id="myFormbalun" method="get" action="baluns/start.html">
-    <input type="submit" name="submitbalun" value="ξωηχ δαμεπιν" class="in_sub"/>  
-  </form>
-  <form id="myFormgishur" method="get" action="gishursichsuch/gishursichsuch.html">
-    <input type="submit" name="submitgishur" value="ξωηχ βιωεψ ριλρεκ" class="in_sub"/> 
-  </form>
+ <!-- <body dir="rtl" style=" background:#2bc4d5 url('main_background.jpg');"> -->
+ <body dir="rtl" style=" background: url('main_background.jpg') center no-repeat;">
+  <div class="logo" style="text-align:center;padding:0;"><img src="winwin.png"></div>
+  <div class="logo" style="text-align:center;padding:0;"><img src="games.png"></div>
+  <div class="gamesForms">
+	<div class="formBox">
+		<form id="myForm" method="get" action="card_game/cardgame.html">
+		<input type="image" height="120" width="120" name="submit" value="ΧΧ©Χ—Χ§ Χ§ΧΧ¤Χ™Χ" class="in_sub" src="cards.png" alt="submit" style="float:left;"/>
+		  <div class="formTextLine">Χ§ΧΧ¤Χ™Χ ΧΧ—Χ¥: </div>
+	      <select name = "GamOptions" style="float:left;font-size:15px;line-height:120px;margin:50px 0;">
+			<option value = "12">12 cards</option>
+			<option value = "20">20 cards</option>
+			<option value = "30">30 cards</option>
+	      </select>
+	     <div class="formTextLine">ΧΧΧ©Χ—Χ§ Χ”Χ§ΧΧ¤Χ™Χ Χ‘ΧΆΧ</div>
+		</form>
+	</div> <!-- formBox -->
+		<div style="clear:both;"></div>
+
+	<div class="formBox">
+	  <form id="myFormbalun" method="get" action="baluns/start.html">
+		<input type="image" height="120" width="120" name="submitbalun" value="ΧΧ©Χ—Χ§ Χ”Χ‘ΧΧ•Χ Χ™Χ" class="in_sub" src="balons.png" style="float:left;"/> 
+	    <div class="formTextLine">ΧΧΧ©Χ—Χ§ Χ”Χ‘ΧΧ•Χ Χ™Χ ΧΧ—Χ¥: </div>
+	  </form>
+	</div> <!-- formBox -->
+		<div style="clear:both;"></div>
+
+	<div class="formBox">
+	  <form id="myFormgishur" method="get" action="gishursichsuch/gishursichsuch.html">
+		<input type="image" height="120" width="120" name="submitgishur" value="ΧΧ©Χ—Χ§ Χ’Χ™Χ©Χ•Χ¨ Χ΅Χ™Χ›Χ΅Χ•Χ" class="in_sub" src="gishur.jpg" style="float:left;"/>
+		<div class="formTextLine">ΧΧΧ©Χ—Χ§ Χ”Χ’Χ™Χ©Χ•Χ¨ Χ΅Χ™Χ›Χ΅Χ•Χ ΧΧ—Χ¥: </div>
+	  </form>
+	</div> <!-- formBox -->
+		<div style="clear:both;"></div>
+  </div> <!-- gamesForms -->
  </body>
 </html>

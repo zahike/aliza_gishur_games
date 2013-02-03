@@ -11,6 +11,7 @@ var right;
 var send_num;
 var playing;
 var balloon_moves;
+var instructionOn;
 
 function randOrd(){
     return (Math.round(Math.random())-0.5); 
@@ -23,6 +24,8 @@ document.all['BGSOUND_ID'].src="sounds/cartoon2.wav";
 	 send_num=0;
 	 playing=true;
 	 balloon_moves=false;
+  document.getElementById("instructions").style.display = "none";
+	 instructionOn=false;
   document.getElementById("rightcounter").innerHTML = "";
   document.getElementById("mass").innerHTML = "";
   document.getElementById("quality").innerHTML = "";
@@ -149,7 +152,7 @@ startGame();
   document.getElementById("quality").innerHTML = words[shaffled_array[word_num]];
   document.getElementById("rightwrong").innerHTML = "  נכון  ";
   document.getElementById("rightwrong").style.color="#009d4f";
-  document.getElementById("rightcounter").innerHTML = "שלחת <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
+  document.getElementById("rightcounter").innerHTML = "ניסית <br />"+send_num+"<br />בלונים<br />צדקת<br />"+right+"<br />פעמים";
 				checked=true;
 				kill_baloom();
 		  }
@@ -195,4 +198,13 @@ startGame();
       }
 	  }
   }
-
+	function appeareInstruction(){
+		if (instructionOn)
+		{
+		 document.getElementById("instructions").style.display = "none";
+		 instructionOn = false;
+		} else {
+		 document.getElementById("instructions").style.display = "block";
+		 instructionOn = true;
+		}
+	}

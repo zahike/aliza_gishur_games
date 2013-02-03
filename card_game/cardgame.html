@@ -13,50 +13,72 @@
   	 var temp=location.search;
 	 temp=temp.substring(1);
 	 params = temp.split('&');
-	 num = params[1].split('=');
+	 num = params[0].split('=');
      var cardNum=num[1];
   </script>
   <script type="text/javascript" src="cardgame.js"></script>
  </head>
 
  <body onLoad="PreloadImages()" style=" background:#2bc4d5 url('blue.jpg');">
-  <script type="text/javascript">
-   switch (cardNum)
-     {
-     case "12":
-           document.write(" <div class=\"wrapper\" style=\"width:840px;\">");
-        break;  
-     case "20":
-           document.write(" <div class=\"wrapper\" style=\"width:1050px;\">");
-        break;  
-     case "30":
-           document.write(" <div class=\"wrapper\" style=\"width:1260px;\">");
-        break;  
-	 }
-  </script>
+	  <script type="text/javascript">
+	   switch (cardNum)
+	     {
+	     case "12":
+	       document.write(" <div class=\"wrapper\" style=\"width:840px;\">");
+		   document.write("<input type=\"button\" value=\"הוראות\" onclick=\"appeareInstruction()\" class=\"inst_but\" style=\"left:850px;\"/>");
+		   document.write("<div id=\"instructions\" style=\"left:630px;\">");
+	       break;  
+	     case "20":
+	       document.write(" <div class=\"wrapper\" style=\"width:1000px;\">");
+		   document.write("<input type=\"button\" value=\"הוראות\" onclick=\"appeareInstruction()\" class=\"inst_but\" style=\"left:1050px;\"/>");
+		   document.write("<div id=\"instructions\" style=\"left:730px;\">");
+	        break;  
+	     case "30":
+	       document.write(" <div class=\"wrapper\" style=\"width:1140px;\">");
+		   document.write("<input type=\"button\" value=\"הוראות\" onclick=\"appeareInstruction()\" class=\"inst_but\" style=\"left:1130px;\"/>");
+	 	   document.write("<div id=\"instructions\" style=\"left:830px;\">");
+	      break;  
+		 }
+	   document.write("אופן המשחק <p><div id=\"instructiontext\"></div></p></div>");
+	  </script>
+
 	  <script type="text/javascript">
 	         for (var i = 0; i < cardNum ; i++ )
-     {
-           document.write("<img id=\"picture"+i+"\" src=\"photo.jpg\" onclick=\"ChangePicture('picture"+i+"',"+i+")\" class=\"box\"/>");
-     }
+		 {
+  	   switch (cardNum)
+	       {
+	     case "12":
+         document.write("<img id=\"picture"+i+"\" src=\"photo.jpg\" onclick=\"ChangePicture('picture"+i+"',"+i+")\" class=\"box\" style=\"width:200px;height:150px;\"/>");
+	       break;  
+	     case "20":
+         document.write("<img id=\"picture"+i+"\" src=\"photo.jpg\" onclick=\"ChangePicture('picture"+i+"',"+i+")\" class=\"box\" style=\"width:190px;height:120px;\"/>");
+	        break;  
+	     case "30":
+         document.write("<img id=\"picture"+i+"\" src=\"photo.jpg\" onclick=\"ChangePicture('picture"+i+"',"+i+")\" class=\"box\" style=\"width:180px;height:100px;\"/>");
+	      break;  
+		   }
+		 }
 	  </script>
+
 	  <div id="piccard"></div>
-  <script type="text/javascript">
-   switch (cardNum)
-     {
-     case "12":
-           document.write("<img id=\"restartPic\" src=\"reset.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 70px 0 70px;\"/>");
-        break;  
-     case "20":
-           document.write("<img id=\"restartPic\" src=\"reset1.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 175px 0 175px;\"/>");
-       break;  
-     case "30":
-           document.write("<img id=\"restartPic\" src=\"reset1.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 280px 0 280px;\"/>");
-         break;  
-	 }
-  </script>
+      <script type="text/javascript">
+	   switch (cardNum)
+	     {
+	     case "12":
+	           document.write("<img id=\"restartPic\" src=\"reset.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 70px 0 70px;\"/>");
+	        break;  
+	     case "20":
+	           document.write("<img id=\"restartPic\" src=\"reset.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 150px 0 150px;\"/>");
+	       break;  
+	     case "30":
+	          document.write("<img id=\"restartPic\" src=\"reset.png\" onclick=\"restart()\" class=\"resetbutton\" style=\"margin:0 220px 0 220px;\"/>");
+	       break;  
+		 }
+	  </script>
 	  <div id="matchedcards"></div>
 	  <div style="clear:both;"></div>
+
+  <a href="../open.html" class="return_butten">Go back to Main menu</a>
   </div>
  </body>
 </html>

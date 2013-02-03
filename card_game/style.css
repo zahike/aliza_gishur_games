@@ -1,11 +1,11 @@
   *{margin:0;padding:0;}
   .wrapper{
+  position:relative;
   height:920px;
-  margin:10px auto;
+  margin:0 auto;
   }
   .box{
   width:200px;
-  height:150px;
   padding:2px;
   margin:3px;
   float:left;
@@ -15,6 +15,14 @@
   height:100px;
   float:left;
   }
+	.inst_but{
+	position:absolute;
+	Z-index:1;
+	width:70px;
+	height:30px;
+	top:20px;
+	font-size:20px;
+	}
   #piccard{
   width:300px;
   height:100px;
@@ -35,3 +43,23 @@
   margin-top:30px;
   float:left;
   }
+  	#instructions{
+	position:absolute;
+	Z-index:2;
+	display:none;
+	background:#c0c0c0;
+	width:450px;
+	height:400px;
+	top:200px;
+	color:#000;
+	font-family:arial;
+	font-size:20px;
+    text-align:right;
+	}
+  .return_butten{
+	position:absolute;
+	top:550px;
+	right:-190px;
+ 	font-family:arial;
+	font-size:18px;
+ }
